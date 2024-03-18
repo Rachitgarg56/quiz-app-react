@@ -1,0 +1,21 @@
+
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: lower-alpha;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+ul li {
+    border: 1px solid gray;
+    background-color: lightgray;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+}
+
