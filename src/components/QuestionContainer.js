@@ -73,6 +73,7 @@ const QuestionContainer = (props) => {
                             optionsArr.map((option,idx) => {
                                 return <li onClick={()=>{
                                     if (timeUp) {
+                                        setSeconds(5);
                                         nextQues(setLastQuestion);
                                         return;
                                     }
