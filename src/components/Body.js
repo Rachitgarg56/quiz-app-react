@@ -16,6 +16,14 @@ const Body = () => {
         setDataArr(parsedRes);
     }
 
+    const nextQues = (setLastQuestion) => {
+        if (index === 9) {
+            setLastQuestion(true);
+            return;
+        } 
+        setIndex(index+1);
+    }
+
     useEffect(()=> {
         getData();
     },[])
@@ -23,7 +31,7 @@ const Body = () => {
     return (
         <section className='body'>
             {
-                dataArr.length && <QuestionContainer obj={dataArr[index]} quesNo={index+1}/>
+                dataArr.length ? <QuestionContainer obj={dataArr[index]} quesNo={index+1} nextQues={nextQues} index={index} /> : <h1>Loading...</h1>
             }
         </section>
     )
